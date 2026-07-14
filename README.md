@@ -1,4 +1,4 @@
-#Data201_Project2 - Linear Regression Analysis
+# About 
 This project focuses on Project 2 of Data 201, implementing Linear Regression to explore the relationship between hours worked per week, productivity scores, employment type, and well-being scores.
 
 # Data Source
