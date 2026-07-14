@@ -1,78 +1,151 @@
-### About 
-This project focuses on Project 2 of Data 201, implementing Linear Regression to explore the relationship between hours worked per week, productivity scores, employment type, and well-being scores.
+# Remote Work Productivity Analysis Using Linear Regression
 
-###  Data Source
-The dataset is sourced from Kaggle and titled "Remote Work Productivity". The key variables in this dataset are:
+## About
 
--Hours Worked Per Week
--Productivity Score
--Well-Being Score
--Employment Type (Two categories: Remote Work & Onsite Work)
+This project was completed as **Project 2** for **DATA 201**. It uses **Linear Regression** to analyze the relationship between employee work habits and well-being. Specifically, the model examines how **hours worked per week**, **productivity score**, and **employment type** (remote vs. onsite) influence an employee's **well-being score**.
 
-### Dataset Overview:
-Total cases: 1001
-Each case represents an employee with the following variables:
-ID Number
-Hours Worked Per Day
-Well-Being Score
-Work Type (binary: Onsite vs Remote)
+---
 
-### Exploratory Data Analysis (EDA)
-The EDA results provide insights into employee work patterns and well-being:
+## Dataset
 
-### Key Findings:
-Working Hours: Most employees work between 35 to 45 hours per week.
-Productivity Distribution:
+**Source:** Kaggle – *Remote Work Productivity*
 
-The distribution of productivity scores follows a normal distribution as shown in the histogram.
-Correlation Findings:
+### Variables
+- Hours Worked Per Week
+- Productivity Score
+- Well-Being Score
+- Employment Type (Remote or Onsite)
 
-A strong correlation is observed between hours worked per week and a binary encoded employment type variable (onsite workers vs remote workers).
-Boxplots Analysis:
+### Dataset Overview
+- **Total observations:** 1,001 employees
+- Each record represents one employee and includes:
+  - Employee ID
+  - Hours Worked Per Week
+  - Productivity Score
+  - Well-Being Score
+  - Employment Type (Remote or Onsite)
 
-Hours Worked by Work Type:
-Employees in office settings exhibit higher counts of working hours per week compared to their remote counterparts.
-Productivity vs. Employment Type:
-Median productivity scores are higher among remote workers compared to onsite workers. Specifically:
-Median productivity scores for remote workers are above 70.
-Median productivity scores for onsite workers are less than 70.
+---
 
-### Linear Regression Model
-The linear regression model evaluates how hours worked per week, productivity scores, and employment type impact well-being scores.
+## Exploratory Data Analysis (EDA)
 
-Model Results:
-R² Score: 0.1088
-Indicates that only 10.88% of the variance in well-being scores is explained by the independent variables.
-Mean Squared Error (MSE): 170.43
-Suggests that the predictions are not highly accurate, and residuals have high variability.
-Residual Analysis:
-Analysis shows high variability in residuals, indicating that the model does not accurately predict well-being scores.
-### Key Findings from Linear Regression Analysis
-The model's coefficients highlight important insights into the relationships between variables:
+The exploratory data analysis (EDA) was conducted to understand the relationships between employee work habits, productivity, and well-being.
 
-Coefficients:
-[-0.09645701, -0.01616481, -10.34311591]
-Intercept:
+### Key Findings
+
+### Working Hours
+- Most employees work between **35 and 45 hours per week**.
+
+### Productivity Distribution
+- Productivity scores follow an approximately **normal distribution**.
+
+### Correlation Analysis
+- A noticeable relationship exists between **hours worked per week** and **employment type**.
+
+### Boxplot Analysis
+
+#### Hours Worked by Employment Type
+- Onsite employees generally work **more hours per week** than remote employees.
+
+#### Productivity by Employment Type
+- Remote employees tend to have **higher productivity scores** than onsite employees.
+- Median productivity score:
+  - **Remote employees:** Above 70
+  - **Onsite employees:** Below 70
+
+---
+
+## Linear Regression Model
+
+A multiple linear regression model was developed to predict **well-being scores** using the following predictors:
+
+- Hours Worked Per Week
+- Productivity Score
+- Employment Type
+
+### Model Performance
+
+| Metric | Value |
+|---------|------:|
+| R² Score | 0.1088 |
+| Mean Squared Error (MSE) | 170.43 |
+
+### Interpretation
+
+- The model explains approximately **10.9%** of the variation in employee well-being.
+- The relatively high MSE indicates that prediction errors remain substantial.
+- Overall, the model has **limited predictive power**, suggesting that additional variables may influence well-being.
+
+---
+
+## Regression Coefficients
+
+### Coefficients
+
+```text
+Hours Worked Per Week:  -0.09645701
+Productivity Score:     -0.01616481
+Employment Type:       -10.34311591
+```
+
+### Intercept
+
+```text
 74.24351283427022
-Interpretation:
-The coefficient value of -10.34 indicates that working in an office is negatively associated with the well-being score compared to working remotely. This suggests that employees working in office settings experience lower well-being scores, assuming all other factors remain constant.
-📊 Visualizations
-Pair Plot of Variables
-A pair plot was used to visualize the relationships between the following variables:
+```
 
-Employment Type (onsite/remote)
-Hours Worked Per Week
-Productivity Scores
-Well-Being Score (target variable)
-The pair plot provides insights into patterns and trends across these variables, particularly focusing on how employment type impacts well-being.
+### Interpretation
 
-### Conclusion
-The linear regression model highlights limited explanatory power, suggesting that:
+The employment type coefficient (**-10.34**) suggests that, after controlling for the other variables, employees working **onsite** are predicted to have well-being scores approximately **10 points lower** than employees working **remotely**.
 
-Independent variables do not fully capture the variance in well-being scores.
-Further exploration (e.g., non-linear modeling or feature engineering) could provide a more accurate model.
-The visualizations and statistical analysis offer a foundational understanding of how hours worked, productivity and employment type interact and impact well-being among employees.
+---
+
+## Visualizations
+
+The project includes several visualizations to better understand the data, including:
+
+- Histograms
+- Boxplots
+- Correlation analysis
+- Pair plots
+
+### Pair Plot
+
+The pair plot illustrates relationships among:
+
+- Employment Type
+- Hours Worked Per Week
+- Productivity Score
+- Well-Being Score
+
+These visualizations help identify trends, distributions, and potential relationships before modeling.
+
+---
+
+## Conclusion
+
+The linear regression model demonstrates that:
+
+- Hours worked, productivity, and employment type explain only a small portion of employee well-being.
+- Additional factors likely influence well-being and should be included in future analyses.
+- More advanced modeling techniques, such as polynomial regression, decision trees, or feature engineering, may improve predictive performance.
+
+Overall, this project provides a foundational analysis of how workplace characteristics relate to employee well-being using linear regression.
+
+---
+
+## Technologies Used
+
+- Python
+- pandas
+- NumPy
+- scikit-learn
+- Matplotlib
+- Seaborn
+
+---
 
 ## Acknowledgments
-Dataset Source: Kaggle - Remote Work Productivity
-Tools Used: matplotlib, seaborn, pandas, scikit-learn, and numpy
+
+- **Dataset:** Kaggle – *Remote Work Productivity*
+- **Course:** DATA 201
