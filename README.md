@@ -2,7 +2,9 @@
 
 ## About
 
-This project was completed as **Project 2** for **DATA 201**. It uses **Linear Regression** to analyze the relationship between employee work habits and well-being. Specifically, the model examines how **hours worked per week**, **productivity score**, and **employment type** (remote vs. onsite) influence an employee's **well-being score**.
+This project applies **multiple linear regression** to analyze the relationship between several independent variables and a target outcome. The analysis includes data cleaning, exploratory data analysis (EDA), data visualization, model development, and evaluation to identify patterns within the dataset and assess the model's predictive performance.
+
+The project also explores correlations between variables, interprets regression coefficients, and evaluates model accuracy using standard performance metrics such as **R²** and **Mean Squared Error (MSE)**. The findings provide insights into the factors associated with the target variable while highlighting opportunities for future model improvements.
 
 ---
 
