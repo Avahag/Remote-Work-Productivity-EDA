@@ -1,7 +1,7 @@
-## About 
+### About 
 This project focuses on Project 2 of Data 201, implementing Linear Regression to explore the relationship between hours worked per week, productivity scores, employment type, and well-being scores.
 
-## Data Source
+###  Data Source
 The dataset is sourced from Kaggle and titled "Remote Work Productivity". The key variables in this dataset are:
 
 -Hours Worked Per Week
@@ -9,7 +9,7 @@ The dataset is sourced from Kaggle and titled "Remote Work Productivity". The ke
 -Well-Being Score
 -Employment Type (Two categories: Remote Work & Onsite Work)
 
-## Dataset Overview:
+### Dataset Overview:
 Total cases: 1001
 Each case represents an employee with the following variables:
 ID Number
@@ -17,10 +17,10 @@ Hours Worked Per Day
 Well-Being Score
 Work Type (binary: Onsite vs Remote)
 
-## Exploratory Data Analysis (EDA)
+### Exploratory Data Analysis (EDA)
 The EDA results provide insights into employee work patterns and well-being:
 
-## Key Findings:
+### Key Findings:
 Working Hours: Most employees work between 35 to 45 hours per week.
 Productivity Distribution:
 
@@ -37,7 +37,7 @@ Median productivity scores are higher among remote workers compared to onsite wo
 Median productivity scores for remote workers are above 70.
 Median productivity scores for onsite workers are less than 70.
 
-## Linear Regression Model
+### Linear Regression Model
 The linear regression model evaluates how hours worked per week, productivity scores, and employment type impact well-being scores.
 
 Model Results:
@@ -66,7 +66,7 @@ Productivity Scores
 Well-Being Score (target variable)
 The pair plot provides insights into patterns and trends across these variables, particularly focusing on how employment type impacts well-being.
 
-## Conclusion
+### Conclusion
 The linear regression model highlights limited explanatory power, suggesting that:
 
 Independent variables do not fully capture the variance in well-being scores.
